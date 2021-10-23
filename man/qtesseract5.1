@@ -1,0 +1,92 @@
+.TH man 1 "11 Sep 2016" "2.0" "Qtesseract5 man page"
+
+
+.SH NAME
+\fBQtesseract5\fP - convert IDX/SUB file in SRT file.
+
+
+.SH SYNOPSIS
+\fBqtesseract5\fP \fI[ options ]\fP source destination
+
+
+.SH DESCRIPTION
+\fBQtesseract5\fP is a software who converts the IDX/SUB files in SRT (text) file. For that works, it use \fIsubp2pgm\fP (for extract the images files from SUB file), \fITesseract\fP (for convert their files in texts) and \fIsubptools\fP (for create a SRT file).
+
+
+.SH INFOS
+It's possible to pause or stop by creating a file named \fI"Pause"\fP or \fI"Stop"\fP in its temp folder (for external sofwtare) or by the buttons of the gui.
+
+
+.SH OPTIONS
+.IP \fB-C,\ --colors\fP
+Colors to use for the custom-colors \fB("custom colors: ON, tridx: 0000, colors: 000000, ffffff, 000000, 000000" by default)\fP.
+
+.IP \fB-c,\ --custom-colors\fP
+Use of the colors of the images texts.
+.br
+\fILevel 0\fP: No use custom colors.
+.br
+\fILevel 1\fP: Use custom colors on images not recognized \fB(by default)\fP.
+.br
+\fILevel 2\fP: Use only customs colors.
+
+.IP \fB-g,\ --gui-level\fP
+Level of the gui.
+.br
+\fILevel 0\fP: No window at all.
+.br
+\fILevel 1\fP: Only check texts window.
+.br
+\fILevel 2\fP: All windows \fB(by default)\fP.
+
+.IP \fB--lang\fP
+Language to use for the software (en or fr) \fB(language system by default)\fP.
+
+.IP \fB-o,\ --open\fP
+Automatically open the SRT file created \fB(false by default)\fP.
+
+.IP \fB-w,\ --overwrite\fP
+Overwrite the SRT output file \fB(false by default)\fP.
+
+.IP \fB-f,\ --temporary-folder\fP
+Folder in which temporary files will be stored \fB(temporary folder created in /tmp by default)\fP.
+
+.IP \fB-r,\ --temporary-remove\fP
+Automatically remove the temporary folder \fB(True by default)\fP. Be Careful if it's a personal folder.
+
+.IP \fB-l,\ --tesseract-language\fP
+Language to use for Tesseract \fB(language system by default)\fP.
+
+.IP \fB-L,\ --tesseract-folder\fP
+Folder contains the languages for Tesseract.
+
+.IP \fB-t,\ --thread\fP
+Number of thread (cpu) to use simultaneous \fB(max value by default)\fP.
+
+.IP \fB-v,\ --verbose\fP
+Level of verbose mode for debug.
+.br
+\fILevel 0\fP: Errors messages.
+.br
+\fILevel 1\fP: Level 0, Number of images files created, Temporary folder path, Conversion progress \fB(by default)\fP.
+.br
+\fILevel 2\fP: Level 1, Commands Lines, Tesseract languages, Options values, Custom color, Conversion started, Check texts needed, SRT file created.
+.br
+\fILevel 3\fP: Level 2, Convert files names, Dialog creation info, Progress dialod ended, List of the texts to check.
+
+.IP \fB-V,\ --version\fP
+Version of the software.
+
+
+.SH NOTES
+This is the second release of my software.
+.br
+Contact me if you have questions.
+.br
+https://forum.ubuntu-fr.org/viewtopic.php?pid=21507283
+
+
+.SH AUTHOR
+Terence Belleguic aka Hizo <hizo@free.fr>
+.br
+The icon has been created by me from the icon of the Oxygen Theme: https://techbase.kde.org/Projects/Oxygen

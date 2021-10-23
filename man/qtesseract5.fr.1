@@ -1,0 +1,92 @@
+.TH man 1 "11 Sep 2016" "2.0" "Manuel de Qtesseract5"
+
+
+.SH NOM
+\fBQtesseract5\fP - convertisseur de fichier IDX/SUB en fichier SRT.
+
+
+.SH SYNOPSIS
+\fBqtesseract5\fP \fI[ options ]\fP source destination
+
+
+.SH DESCRIPTION
+\fBQtesseract5\fP est un logiciel qui converti les fichiers IDX/SUB en fichier (texte) SRT. Pour cela, il utilise \fIsubp2pgm\fP (pour extraire les fichiers image du fichier SUB), \fITesseract\fP (pour convertir les fichiers en texte) et \fIsubptools\fP (pour créer le fichier de sortie SRT).
+
+
+.SH INFOS
+Il est possible de mettre de mettre en pause ou de stopper le travail en créant des fichiers \fI"Pause"\fP et \fI"Stop"\fP dans le dossier temporaire utilisé par le logiciel (depuis l'exterieur) ou via les boutons de l'interface graphique.
+
+
+.SH OPTIONS
+.IP \fB-C,\ --colors\fP
+Couleurs à utiliser pour les couleurs personnalisées \fB("custom colors: ON, tridx: 0000, colors: 000000, ffffff, 000000, 000000" par défaut)\fP.
+
+.IP \fB-c,\ --custom-colors\fP
+Utilisation des couleurs personnalisées des images texte.
+.br
+\fINiveau 0\fP : Pas d'utilisation des couleurs personnalisées.
+.br
+\fINiveau 1\fP : Utilisation des couleurs personnalisées sur les textes non reconnus \fB(par défaut)\fP.
+.br
+\fINiveau 2\fP : Utilisation des couleurs personnalisées uniquement.
+
+.IP \fB-g,\ --gui-level\fP
+Niveau d'interface graphique.
+.br
+\fINiveau 0\fP : N'afficher aucune fenêtre.
+.br
+\fINiveau 1\fP : N'afficher que la fenêtre de vérification des textes.
+.br
+\fINiveau 2\fP : Afficher toutes les fenêtres \fB(par défaut)\fP.
+
+.IP \fB--lang\fP
+Langage à utiliser pour le logiciel (en ou fr) \fB(language du systeme par défaut)\fP.
+
+.IP \fB-o,\ --open\fP
+Ouvrir automatiquement le fichier SRT créé \fB(faux par défaut)\fP.
+
+.IP \fB-w,\ --overwrite\fP
+Écrire par dessus le fichier SRT de sortie \fB(faux par défaut)\fP.
+
+.IP \fB-f,\ --temporary-folder\fP
+Dossier dans lequel seront stockés les fichiers temporaires \fB(dossier temporaire créé dans /tmp par défaut)\fP.
+
+.IP \fB-r,\ --temporary-remove\fP
+Supprimer automatiquement le dossier temporaire \fB(Vrai par défaut)\fP. Attention si c'est un dossier personnel.
+
+.IP \fB-l,\ --tesseract-language\fP
+Langage à utiliser pour Tesseract \fB(language du systeme par défaut)\fP.
+
+.IP \fB-L,\ --tesseract-folder\fP
+Dossier contenant les langues pour Tesseract.
+
+.IP \fB-t,\ --thread\fP
+Nombre de processus (cpu) à utiliser simultanément \fB(valeur max par défaut)\fP.
+
+.IP \fB-v,\ --verbose\fP
+Niveau du mode verbose pour le debug.
+.br
+\fINiveau 0\fP : Messages d'erreur.
+.br
+\fINiveau 1\fP : Niveau 0, Nombre d'images textes créés, Adresse du dossier temporaire, Progression de la conversion \fB(par défaut)\fP.
+.br
+\fINiveau 2\fP : Niveau 1, Lignes de commande, Langues de Tesseract, Valeurs des options, Personnalisation des couleurs, Début de la conversion, Nécessiter de vérifier les textes, Création du fichier SRT.
+.br
+\fINiveau 3\fP : Niveau 2, Noms des fichiers convertis, Info sur la création des fenêtres, Fin de la fenêtre de progression, Liste des images textes à vérifier.
+
+.IP \fB-V,\ --version\fP
+Version du logiciel.
+
+
+.SH NOTES
+Ceci est la seconde mouture de mon logiciel.
+.br
+Contactez-moi si vous avez des questions.
+.br
+https://forum.ubuntu-fr.org/viewtopic.php?pid=21507283
+
+
+.SH AUTEUR
+\fITerence Belleguic\fP aka \fBHizo\fP <hizo@free.fr>
+.br
+L'icône que j'ai créé est fait depuis une icône du théme Oxygen : https://techbase.kde.org/Projects/Oxygen

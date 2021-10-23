@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="/">
+    <file>img/application-exit.svg</file>
+    <file>img/archive-extract.svg</file>
+    <file>img/configure.svg</file>
+    <file>img/dialog-cancel.svg</file>
+    <file>img/dialog-ok-apply.svg</file>
+    <file>img/document-open.svg</file>
+    <file>img/edit-copy.svg</file>
+    <file>img/edit-delete.svg</file>
+    <file>img/edit-undo.svg</file>
+    <file>img/en.png</file>
+    <file>img/folder-open.svg</file>
+    <file>img/fr.png</file>
+    <file>img/go-next.svg</file>
+    <file>img/go-previous.svg</file>
+    <file>img/help-about.svg</file>
+    <file>img/media-playback-pause.svg</file>
+    <file>img/process-stop.svg</file>
+    <file>img/qtesseract5.png</file>
+    <file>img/qt.png</file>
+    <file>img/run-build.svg</file>
+    <file>img/test.svg</file>
+    <file>img/text-x-texinfo.svg</file>
+    <file>img/un.png</file>
+    <file>img/view-refresh.svg</file>
+  </qresource>
+</RCC>
